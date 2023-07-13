@@ -1,0 +1,38 @@
+{
+    "layout": {
+        "hspace": "2mm",
+        "vspace": "2mm",
+        "rows": "4",
+        "cols": "4",
+        "vbonecut": "False"
+    },
+    "source": {
+        "tolerance": "25mm"
+    },
+    "tabs": {
+        "type": "fixed",
+        "vwidth": "8mm",
+        "hwidth": "4mm",
+        "fillet": "1.0mm"
+    },
+    "cuts": {
+        "type": "vcuts",
+        "layer": "Edge.Cuts"
+    },
+    "framing": {
+        "type": "frame",
+        "cuts": "none"
+    },
+    "tooling": {
+        "type": "4hole",
+        "hoffset": "2.5mm",
+        "voffset": "2.5mm",
+        "paste": "True"
+    },
+    "fiducials": {
+        "type": "3fid",
+        "hoffset": "2.5mm",
+        "voffset": "5mm",
+        "opening": "1.7mm"
+    }
+}
