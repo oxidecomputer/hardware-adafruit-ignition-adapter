@@ -1,0 +1,62 @@
+================================================================================
+RELEASE NOTES - 913-0000090_rev1_v1
+================================================================================
+
+The release package contains three sets of files:
+
+- The release notes (this document)
+- A PDF of the schematic
+- A bill of materials (BOM) structured in the Sierra Circuits format
+- A zipped archive containing the Gerber files, drill files, and pick-and-place
+coordinate files that was submitted to the fabricator.
+
+We're fabricating this PCB with Sierra Circuits Turnkey Pro PCB service
+https://www.protoexpress.com/
+
+--------------------------------------------------------------------------------
+NOTE: Because Benchmark Electronics recieves this board fully assembled, we
+treat it as a PCBA in Duro. We don't have separate CPNs for the PCB and the
+PCBA. When Sierra Circuits asks us for a Part Number for the PCB and
+a part number for the assembly, we use the 913-0000100 CPN for both the PCB
+and the assembly.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+NOTE: This is actually revision 2 of the board, but in Duro, this is revision 1.
+Benchmark expects to see 913-000090_rev1, so that's what we give it.
+--------------------------------------------------------------------------------
+
+================================================================================
+Fabrication Notes
+================================================================================
+
+Here's the information to plug into the Sierra Circuits quote tool:
+
+PCB Part Number = 913-0000090
+Revision = 1
+[x] Keep the ASSY Part # same as the PCB Part #
+Layers = 4 Layer
+Board Thickness = 0.062 in
+Minimum Trace or Space = 0.007 in (the smallest space in the design is 0.2mm/7.87mils)
+Surface Finish = ENIG
+Board Dimensions = 43mm x 62mm (1.69 in x 2.44 in)
+minimum hole size = 0.010 inches or more (it's 0.4mm/15 mils)
+number of holes per board = 200 (approximate)
+aseembly on = Both Sides
+quantity = 25 assembled PCBs
+turn time = 10 days
+
+================================================================================
+BOM Notes:
+================================================================================
+
+Most of the components we use at Benchmark are currently out of stock at
+all suppliers, including our 1uF cap and green LED.
+
+- The green LED was replaced with the VLMG1500-GS08, and I added a silkscreen
+marking on the PCB to indicate the cathode pin. However, if this LED is rotated,
+it won't impact proper operation.
+
+There are no DNI parts in this design, which makes the BOM easy.
+
+We replaced the 10uF tantalum cap with a 1206 part. See https://github.com/oxidecomputer/hardware-donglet/issues/1
