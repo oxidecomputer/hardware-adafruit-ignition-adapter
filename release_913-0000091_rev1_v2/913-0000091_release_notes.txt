@@ -1,0 +1,72 @@
+================================================================================
+RELEASE NOTES - 913-0000091_rev1_v2
+
+CHANGES:
+
+- Added missing NC Drill file to output job and regenerated tapeout data
+================================================================================
+
+The release package contains three sets of files:
+
+- The release notes (this document)
+- A PDF of the schematic
+- A bill of materials (BOM) structured in the Sierra Circuits format
+- A zipped archive containing the Gerber files, drill files, and pick-and-place
+coordinate files that was submitted to the fabricator.
+
+We're fabricating this PCB with Sierra Circuits Turnkey Pro PCB service
+https://www.protoexpress.com/
+
+--------------------------------------------------------------------------------
+NOTE: Because Benchmark Electronics recieves this board fully assembled, we
+treat it as a PCBA in Duro. We don't have separate CPNs for the PCB and the
+PCBA. When Sierra Circuits asks us for a Part Number for the PCB and
+a part number for the assembly, we use the 913-0000100 CPN for both the PCB
+and the assembly.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+NOTE: This is actually revision 2 of the board, but in Duro, this is revision 1.
+Benchmark expects to see 913-000090_rev1, so that's what we give it.
+--------------------------------------------------------------------------------
+
+================================================================================
+Fabrication Notes
+================================================================================
+
+Here's the information to plug into the Sierra Circuits quote tool:
+
+PCB Part Number = 913-0000091
+Revision = 1
+[x] Keep the ASSY Part # same as the PCB Part #
+Layers = 4 Layer
+Board Thickness = 0.062 in
+Minimum Trace or Space = 0.007 in (the smallest space in the design is 0.2mm/7.87mils)
+Surface Finish = ENIG
+Board Dimensions = 1.9in x 0.9in
+minimum hole size = 0.009 (it's 0.25mm vias, 9.842mil)
+number of holes per board = 100 (approximate)
+aseembly on = One Sides
+quantity = 30 assembled PCBs
+turn time = 10 days
+
+================================================================================
+BOM Notes:
+================================================================================
+
+There are no DNI parts in this design, which makes the BOM easy.
+
+Allow Sierra to replace caps and resistors with their preferred components.
+
+================================================================================
+Releasing Process
+================================================================================
+This project is in Altium, so we have a sligtly different release process.
+
+- Generate the files in Altium and release them
+- Use the altium web viewer to download the source files
+- Rename the source files, if required
+- Zip the gerbers
+- Submit them to Sierra Circuits
+- Copy the release files you downloaded into the github repo and push them
+- In Github, create a release using those files.

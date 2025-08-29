@@ -1,0 +1,212 @@
+*************************************************************
+FileName = ignition-adapter.GBR
+AutoAperture = True
+*************************************************************
+Generating : Bottom Paste
+      File : ignition-adapter.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Layer 4
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : ignition-adapter.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : ignition-adapter.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Layer 4
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : ignition-adapter.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : ignition-adapter.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : ignition-adapter.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Layer 4
+      File : ignition-adapter.GBL
+
+    Adding Layer      : Layer 4
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Layer 3
+      File : ignition-adapter.G2
+
+    Adding Layer      : Layer 3
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Layer 2
+      File : ignition-adapter.G1
+
+    Adding Layer      : Layer 2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Layer 1
+      File : ignition-adapter.GTL
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : ignition-adapter.GD1
+
+    Adding Drill Pair : Layer 1-Layer 4
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : ignition-adapter.GG1
+
+    Adding Drill Pair : Layer 1-Layer 4
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : ignition-adapter.GM
+
+
+Used DCodes :
+    D39
+*************************************************************
+
