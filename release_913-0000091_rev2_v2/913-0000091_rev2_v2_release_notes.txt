@@ -1,0 +1,62 @@
+================================================================================
+RELEASE NOTES - 913-0000091_rev2_v1
+
+CHANGES:
+
+- Fixed https://github.com/oxidecomputer/hardware-ignition-adapter/issues/11
+- Fixed https://github.com/oxidecomputer/hardware-ignition-adapter/issues/10
+- Changed the board from 4 layers to 2 layers to reduce cost
+- Fixed unoptimized CRESET_L route
+================================================================================
+
+The release package contains three sets of files:
+
+- The release notes (this document)
+- A PDF of the schematic
+- A bill of materials (BOM) structured in the Sierra Circuits format
+- A zipped archive containing the Gerber files, drill files, and pick-and-place
+coordinate files that was submitted to the fabricator.
+
+We're fabricating this PCB with Sierra Circuits Turnkey Pro PCB service
+https://www.protoexpress.com/
+
+================================================================================
+Fabrication Notes
+================================================================================
+
+Here's the information to plug into the Sierra Circuits quote tool:
+
+PCB Part Number = 913-0000091
+Revision = 2
+[x] Keep the ASSY Part # same as the PCB Part #
+Layers = 2 Layer
+Board Thickness = 0.062 in
+Minimum Trace or Space = 0.010 in 
+Surface Finish = ENIG
+Board Dimensions = 2.0 in x 0.9 in
+minimum hole size = 0.010 in
+number of holes per board = 100 (approximate)
+aseembly on = One Side
+quantity = 30 assembled PCBs
+turn time = 5 days
+
+================================================================================
+BOM Notes:
+================================================================================
+
+There are no DNI parts in this design, which makes the BOM easy.
+
+Allow Sierra to replace caps and resistors with their preferred components.
+
+================================================================================
+Releasing Process
+================================================================================
+This project is in Altium, so we have a sligtly different release process.
+
+- Generate the files in Altium and release them
+- Use the altium web viewer to download the source files
+- Rename the source files, if required
+- Zip the gerbers
+- Submit them to Sierra Circuits
+- Copy the release files you downloaded into the github repo and push them
+- In Github, create a release using those files.
