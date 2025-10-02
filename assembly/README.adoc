@@ -1,39 +1,44 @@
-= Assembly Instructions
+= Ignition Programming Dongle Assembly Instructions
 
 == Materials
 
 - One (1) 913-0000089 Adafruit FT232H breakout board (Adafruit Product ID [2264](https://www.adafruit.com/product/2264))
 - One (1) 913-0000091 Adafruit Ignition Adapter PCBA
-- One (1) SFSD-05-28-G-10.00-D-NDX cable assembly (or different length if desired)
+- One (1) 920-0000116 Ignition Programming Cable (Samtec SFSD-05-28-G-3.25-D-NDX)
 - 1-inch diameter adhesive-lined heat shrink tubing with a 3:1 shrink ratio
-- X-Acto knife
+- X-Acto knife or scalpel
 - Superglue
-- Heat shrink cable labels (Dymo XXXXXXX or equivalent)
 - Heat gun
-- Brother PTouch printer
-- Brother with XXXXXXX width label tape
+- Brother PTouch PT-P700 printer
+- Brother TZE 9mm black-on-white label tape
 - Dymo Rhino 4200 label maker
-- Dymo A18057 19mm heat shrink label tube (or equivalent)
+- Dymo A18057 19mm heat shrink label tube
+- (Optional) One 3D-printed https://github.com/oxidecomputer/hardware-adafruit-ignition-adapter/tree/main/assembly/adafruit_soldering_fixture[Adafruit soldering fixture]
 
-CAUTION: Before starting, make sure the `I2C MODE` switch on the Adafruit FT232H
-breakout board is set to `OFF`.
+== Assembly
 
-== Instructions
+. Remove the Adafruit FT232H breakout board from its package. Confirm that the
+`I2C MODE` switch on the Adafruit FT232H breakout board is set to `OFF`.
+
+. Slide the Adafruit FT232H breakout board onto the headers installed on the
+Ignition adapter board as shown in Figure X. If you're assembling lots of these
+dongles, we recommend using the 3D-printed
+https://github.com/oxidecomputer/hardware-adafruit-ignition-adapter/tree/main/assembly/adafruit_soldering_fixture[Adafruit
+soldering fixture] to achieve consistent alignment.
 
 . Solder the Adafruit Ignition adapter board to the Adafruit FT232H breakout
 board.
 
 . Cut a 2-inch length of 1-inch diameter heat shrink tubing and shrink wrap the
-entire PCBA, including the connector
+entire PCBA, including the connectors, as shown in Figure X.
 
-. Allow the heat shrink to completely cool
+. Once the heat shrink has cooled and hardened completely, cut the heat shrink
+away from the Ignition programming connector with an X-Acto knife or scalpel as
+shown in Figure X.
 
-. Cut the heat shrink away from the Ignition programming connector
-
-. Plug in the SFSD-05-28-G-10.00-D-NDX cable to connector J3
-
-. Apply a dot of superglue where the cable and connector meet to secure the
-cable in place.
+. Plug in the SFSD-05-28-G-10.00-D-NDX cable to connector J3 and apply a dot of
+superglue at the joint between the connector and the cable to secure the cable
+in place.
 
 == Flashing the FT232 EEPROM
 
@@ -71,17 +76,16 @@ to the bottom of the dongle as shown in Figure X.
 
 Each Ignition programming dongle needs two labels:
 
-Print the following label on the Brother Ptouch printer on 9mm tape and affix it
-to the back of the dongle:
+- A label on the dongle with the FT232 serial number. Running `adafruit_fix.py`
+prints this label automatically
 
-NOTE: The `ptouch-print` script hard-codes the font size to 20pt
-
-
-
-Print the following label on 19mm Dymo heat shrink label tape and apply it to
-the ignition cable:
+- A label on the programming cable, to help operators identify which dongle is
+which. Print the ceble label on 19mm Dymo heat shrink label tape in 12pt font
+and apply it to the ignition cable:
 
 ```
 IGNITION SPI
-913-xxxxxxx
+920-0000116
 ```
+
+Apply the labels to the dongle and the cable as shown in Figure X:
