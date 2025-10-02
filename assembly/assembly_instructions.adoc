@@ -1,0 +1,87 @@
+= Assembly Instructions
+
+== Materials
+
+- One (1) 913-0000089 Adafruit FT232H breakout board (Adafruit Product ID [2264](https://www.adafruit.com/product/2264))
+- One (1) 913-0000091 Adafruit Ignition Adapter PCBA
+- One (1) SFSD-05-28-G-10.00-D-NDX cable assembly (or different length if desired)
+- 1-inch diameter adhesive-lined heat shrink tubing with a 3:1 shrink ratio
+- X-Acto knife
+- Superglue
+- Heat shrink cable labels (Dymo XXXXXXX or equivalent)
+- Heat gun
+- Brother PTouch printer
+- Brother with XXXXXXX width label tape
+- Dymo Rhino 4200 label maker
+- Dymo A18057 19mm heat shrink label tube (or equivalent)
+
+CAUTION: Before starting, make sure the `I2C MODE` switch on the Adafruit FT232H
+breakout board is set to `OFF`.
+
+== Instructions
+
+. Solder the Adafruit Ignition adapter board to the Adafruit FT232H breakout
+board.
+
+. Cut a 2-inch length of 1-inch diameter heat shrink tubing and shrink wrap the
+entire PCBA, including the connector
+
+. Allow the heat shrink to completely cool
+
+. Cut the heat shrink away from the Ignition programming connector
+
+. Plug in the SFSD-05-28-G-10.00-D-NDX cable to connector J3
+
+. Apply a dot of superglue where the cable and connector meet to secure the
+cable in place.
+
+== Flashing the FT232 EEPROM
+
+For some reason, https://forums.adafruit.com/viewtopic.php?t=147113[Adafruit
+programs all their FT232H breakout board EEPROMs with identical, invalid EEPROM
+images]. Oxide's manufacturing stations identify dongles by serial number, so we
+use a Python script to generate a random serial number and flash the EEPROM with
+a valid image. The Python script also prints out a serial number label for the
+dongle so we can identify it during programming station setup.
+
+Dependencies:
+
+- `python3`
+- `ftdi-eeprom`
+- `ptouch-print` (manually built following [these instructions](https://github.com/HenrikBengtsson/brother-ptouch-label-printer-on-linux))
+
+
+Clone the [oxidecomputer/hardware-toolbox
+](https://github.com/oxidecomputer/hardware-toolbox)repo and run
+`adafruit-fix.py`.
+
+```
+$ git clone https://github.com/oxidecomputer/hardware-toolbox
+$ cd hardware-toolbox/adafruit-programming
+$ python3 adafruit_fix.py
+```
+
+See `$ python3 adafruit_fix.py --help` for a list of optional arguments.
+
+Running `adafruit_fix.py` will generate a random serial number, program the
+FT232 EEPROM, and print a label with the serial number. Apply the serial number
+to the bottom of the dongle as shown in Figure X.
+
+== Labels
+
+Each Ignition programming dongle needs two labels:
+
+Print the following label on the Brother Ptouch printer on 9mm tape and affix it
+to the back of the dongle:
+
+NOTE: The `ptouch-print` script hard-codes the font size to 20pt
+
+
+
+Print the following label on 19mm Dymo heat shrink label tape and apply it to
+the ignition cable:
+
+```
+IGNITION SPI
+913-xxxxxxx
+```
