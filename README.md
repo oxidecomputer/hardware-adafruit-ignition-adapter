@@ -41,5 +41,6 @@ because it is.
 
 ## Assembly
 
-Assembly instructions for the complete Ignition programming dongle are located
-[here](https://github.com/oxidecomputer/hardware-adafruit-ignition-adapter/tree/main/assembly).
+Follow the [assembly
+instructions](https://github.com/oxidecomputer/hardware-adafruit-ignition-adapter/tree/main/assembly)
+to assemble a complete Ignition programming dongle.
